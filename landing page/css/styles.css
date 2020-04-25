@@ -23,20 +23,11 @@ a{
   color: white;
 }
 
-.logo_image{
-  margin-top: 7px;
-}
-
-.navigation_menu{
-  display: inline;
-  margin-left: 40%;
-}
-
 .header{
   margin: 0;
-  padding-left: 18%;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   color: white;
   height: 84px;
   background-color: #007765;
@@ -45,6 +36,9 @@ a{
 .heading_inf{
   height: 403px;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .heading_text{
@@ -52,7 +46,6 @@ a{
   font-size: 72px;
   line-height: 84px;
   position: absolute;
-  margin: 150px 27% 0% 33%;
 }
 
 .heading_image{
@@ -63,13 +56,15 @@ a{
 .the_problem{
   height: 570px;
   background-color: #eee;
-  padding-left: 30%;
-  padding-right: 30%;
-  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .article_heading_text{
-  margin-left: 18%;
   color: #007765;
   font-weight: 500;
   font-size: 64px;
@@ -77,10 +72,10 @@ a{
 }
 
 .problem_text_block{
-  padding-top: 15px;
-  padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 23px;
   line-height: 37px;
 }
 
@@ -108,7 +103,8 @@ a{
 }
 
 .heading_pipercoin{
-  margin-left: 25%;
+  display: flex;
+  justify-content: center;
   color: #007765;
   font-weight: 500;
   font-size: 64px;
@@ -123,6 +119,7 @@ a{
 }
 
 .ppc_desc{
+  margin-top: 60px;
   font-weight: normal;
   font-size: 18px;
   line-height: 30px;
