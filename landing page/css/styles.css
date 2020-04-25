@@ -143,21 +143,19 @@ a{
   font-size: 64px;
   line-height: 75px;
   color: #007765;
-  margin-left: 40%;
-  margin-right: 30%;
+  justify-content: center;
 }
 
 .team_members{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 70px;
-  padding-right: 10%;
 }
 
 .member{
-  margin-left: 10%;
+  display: flex
+  align-content: center;
   text-align: center;
-  margin-right: 30px;
 }
 
 .name{
