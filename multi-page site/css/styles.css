@@ -346,3 +346,60 @@ body{
 .collections_desc{
   margin-bottom: 28px;
 }
+
+.footer{
+  margin-bottom: 115px;
+}
+
+.footer__container{
+  width: 1105px;
+}
+
+.site-menu__sections{
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-menu__col{
+  margin-right: 20px;
+}
+
+.site-menu__col:last-child{
+  margin-right: 0;
+}
+
+.site-menu__title{
+  font-family: var(--titlesFont);
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 24px;
+}
+
+.site-menu__item{
+  margin-bottom: 15px;
+}
+
+.site-menu__link{
+  color: #737373;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.site-menu__link:hover{
+  color: var(--red);
+}
+
+.site-menu__text{
+  margin-bottom: 30px;
+  font-size: 15px;
+  color: #737373;
+}
+
+.site-menu__text-row{
+  color: #737373;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+}
