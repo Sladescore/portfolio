@@ -160,6 +160,10 @@ body{
   background: var(--black);
 }
 
+.products{
+  margin-bottom: 160px;
+}
+
 .products__list{
   display: flex;
   flex-wrap: wrap;
@@ -269,8 +273,13 @@ body{
   color: #fff;
 }
 
+.collections{
+  margin-bottom: 135px;
+}
+
 .collections__list{
   display: flex;
+  margin-left: 22px;
 }
 
 .collections__item{
@@ -279,31 +288,49 @@ body{
   overflow: hidden;
   margin-right: 30px;
   background: url("/src/img/bg/pattern.png") center center / 500px;
-    position: relative;
+  position: relative;
 }
 
-.collection__item::before{
+.collections__item::before{
   content: "";
   display: block;
   position: absolute;
-  height: 100%;
-  width: 50%;
+  height: 176%;
+  width: 60%;
+  top: -17;
+  left: -18%;
+  background: center center / contain no-repeat;
 }
 
-.collection__item--type-guys{
-  background: url("/src/img/collections/collection_man.png")
+.collection__item--type-guys::before{
+  background-image: url("/src/img/collections/collection_man.png");
 }
 
-.collection__item:last-child{
-  margin-right: 0;
+.collection__item--type-girls::before{
+  background-image: url("/src/img/collections/collection_woman.png");
+  top: -31%;
+  width: 80%;
+  left: -25%;
 }
 
 .collections__link{
+  position: relative;
   display: block;
   padding: 74px 13% 74px 44%;
   text-decoration: none;
   color:inherit;
   font-size: 15px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.collections__link:hover .btn{
+  background: var(--red);
+  color: #fff;
+}
+
+.collection__item:last-child{
+  margin-right: 0;
 }
 
 .collections__title{
