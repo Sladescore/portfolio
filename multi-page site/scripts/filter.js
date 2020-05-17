@@ -25,7 +25,7 @@
 
 			iso.arrange({
 				filter: `.${filterName}`
-			});
+			})
 		});
 
 	});
