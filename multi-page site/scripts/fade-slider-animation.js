@@ -17,4 +17,4 @@
 		slides[index].classList.add(visibleClass);
 	}, 5000);
 
-}())
+}());

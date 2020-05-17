@@ -3,32 +3,31 @@
 	const elem = document.querySelector('.products__list');
 	const iso = new Isotope( elem, {
 	  itemSelector: '.products__item',
+	  filter: '.popular'
 	});		
 
 
-	const controlls = document.querySelectorAll(".filter__item");
+	const controlls = document.querySelectorAll(".filter__link");
 	const activeClass = "filter__item--active";
 
 	controlls.forEach(function(control){
 
-		controlsLink = document.querySelector(".filter__link");
-
 		control.addEventListener("click", function(e){
 			e.preventDefault();
 
-			const filterName = controlsLink.getAttribute("data-filter");
+			const filterName = control.getAttribute("data-filter");
 
 			controlls.forEach(function(link){
-				link.classList.remove(activeClass);
+				link.closest(".filter__item").classList.remove(activeClass);
 			});
 
-			control.classList.add(activeClass);
+			control.closest(".filter__item").classList.add(activeClass);
 
 			iso.arrange({
-				filter: '.${filterName}';
+				filter: `.${filterName}`
 			});
 		});
 
 	});
 
-}())
+}());
