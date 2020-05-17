@@ -6,7 +6,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="icons-sprite.svg">
   </head>
   <body>
 
@@ -16,7 +17,7 @@
 
         <header class="header">
           <a href="" class="logo">
-            <img src="./src/img/content/logos/logo-main.png" alt="lost shirt logo" class="logo__pic">
+            <img src="src/img/content/logos/logo-main.png" alt="lost shirt logo" class="logo__pic">
           </a>
           <a href="mailto:sladescorework@gmail.com" class="mail">
             <div class="mail__title">По всем вопросам пишите на:</div>
@@ -25,8 +26,8 @@
         </header>
 
         <div class="hero__content">
-          <div class="fade-slider">
-            <div class="fade-slider__item">
+          <ul class="fade-slider">
+            <li class="fade-slider__item fade-slider__item--style-tshirts">
               <div class="fade-slider__text">
                 <h1 class="lined-text">
                   <div class="lined-text__word">три</div>
@@ -35,23 +36,39 @@
                   <div class="lined-text__word lined-text__word-color-yellow">двух</div>
                 </h1>
               </div>
-            </div>
-          </div>
+            </li>
+            <li class="fade-slider__item fade-slider__item--style-games fade-slider__item--visible">
+              <div class="fade-slider__text">
+                <h1 class="lined-text">
+                  <div class="lined-text__word">любимые игры</div>
+                  <div class="lined-text__word lined-text__word-color-yellow">на лучших футболках</div>
+                </h1>
+              </div>
+            </li>
+            <li class="fade-slider__item fade-slider__item--style-presents">
+              <div class="fade-slider__text">
+                <h1 class="lined-text">
+                  <div class="lined-text__word">подарки</div>
+                  <div class="lined-text__word lined-text__word-color-yellow">для любимых</div>
+                </h1>
+              </div>
+            </li>
+          </ul>
         </div>
 
-        <aside class="sidebar sidebar--opened">
+        <aside class="sidebar">
           <a href="#" class="sidebar__hamburger">
             <svg class="sidebar__hamburger-icon">
-              <use xlink:href="/src/icons/icons-sprite.svg#bars"></use>
+              <use xlink:href="src/icons/icons-sprite.svg#bars"></use>
             </svg>
           </a>
           <div class="sidebar__header">
              <a href="#" class="logo">
-               <img src="/src/img/content/logos/logo-main.png" alt="Lost shirt" class="logo__image">
+               <img src="src/img/content/logos/logo-main.png" alt="Lost shirt" class="logo__image">
              </a>
              <a href="#" class="sidebar__close">
                <svg class="sidebar__close-icon">
-                 <use xlink:href="/src/icons/icons-sprite.svg#cross"></use>
+                 <use xlink:href="src/icons/icons-sprite.svg#cross"></use>
                </svg>
              </a>
           </div>
@@ -85,31 +102,32 @@
       </section>
 
       <section class="products">
+
         <div class="container">
           <ul class="filter">
             <li class="filter__item filter__item--active">
-              <a href="#" class="filter__link">Популярное</a>
+              <a href="#" data-filter="popular" class="filter__link">Популярное</a>
             </li>
             <li class="filter__item">
-              <a href="#" class="filter__link">Новинки</a>
+              <a href="#" data-filter="new" class="filter__link">Новинки</a>
             </li>
             <li class="filter__item">
-              <a href="#" class="filter__link">Бестселлеры</a>
+              <a href="#" data-filter="bestsellers" class="filter__link">Бестселлеры</a>
             </li>
             <li class="filter__item">
-              <a href="#" class="filter__link">Специальные предложения</a>
+              <a href="#" data-filter="specials" class="filter__link">Специальные предложения</a>
             </li>
             <li class="filter__item">
-              <a href="#" class="filter__link">Скоро в продаже</a>
+              <a href="#" data-filter="soon" class="filter__link">Скоро в продаже</a>
             </li>
           </ul>
           <ul class="products__list">
-            <li class="products__item">
+            <li class="products__item new bestsellers">
               <div class="products__price">
                 <div class="products__price-amount">2 800</div>
               </div>
-              <div class="products__content">
-                <img src="/src/img/tshirts/tshirt_01.png" alt="bo-jack tshirt" class="products__image">
+              <div class="products__content new specials">
+                <img src="src/img/tshirts/tshirt_01.png" alt="bo-jack tshirt" class="products__image">
                 <div class="products__desc">
                   <div class="products__desc--text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, dignissimos!
@@ -118,12 +136,12 @@
                 </div>
               </div>
             </li>
-            <li class="products__item">
+            <li class="products__item soon">
               <div class="products__price">
                 <div class="products__price-amount">1 500</div>
               </div>
               <div class="products__content">
-                <img src="/src/img/tshirts/tshirt_02.png" alt="bo-jack tshirt" class="products__image">
+                <img src="src/img/tshirts/tshirt_02.png" alt="bo-jack tshirt" class="products__image">
                 <div class="products__desc">
                   <div class="products__desc--text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, dignissimos!
@@ -132,12 +150,12 @@
                 </div>
               </div>
             </li>
-            <li class="products__item products__item--color-black products__item--size-double">
+            <li class="products__item soon products__item--color-black products__item--size-double">
               <div class="products__price">
                 <div class="products__price-amount">1 800</div>
               </div>
               <div class="products__content">
-                <img src="/src/img/tshirts/tshirt_03.png" alt="bo-jack tshirt" class="products__image">
+                <img src="src/img/tshirts/tshirt_03.png" alt="bo-jack tshirt" class="products__image">
                 <div class="products__desc">
                   <div class="products__desc--text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, dignissimos!
@@ -146,12 +164,12 @@
                 </div>
               </div>
             </li>
-            <li class="products__item products__item--color-black products__item--size-double">
+            <li class="products__item new specials products__item--color-black products__item--size-double">
               <div class="products__price">
                 <div class="products__price-amount">2 300</div>
               </div>
               <div class="products__content">
-                <img src="/src/img/tshirts/tshirt_04.png" alt="bo-jack tshirt" class="products__image">
+                <img src="src/img/tshirts/tshirt_04.png" alt="bo-jack tshirt" class="products__image">
                 <div class="products__desc">
                   <div class="products__desc--text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, dignissimos!
@@ -160,12 +178,12 @@
                 </div>
               </div>
             </li>
-            <li class="products__item">
+            <li class="products__item bestsellers specials">
               <div class="products__price">
                 <div class="products__price-amount">1 200</div>
               </div>
               <div class="products__content">
-                <img src="/src/img/tshirts/tshirt_05.png" alt="bo-jack tshirt" class="products__image">
+                <img src="src/img/tshirts/tshirt_05.png" alt="bo-jack tshirt" class="products__image">
                 <div class="products__desc">
                   <div class="products__desc--text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, dignissimos!
@@ -174,12 +192,12 @@
                 </div>
               </div>
             </li>
-            <li class="products__item">
+            <li class="products__item new">
               <div class="products__price">
                 <div class="products__price-amount">2 100</div>
               </div>
               <div class="products__content">
-                <img src="/src/img/tshirts/tshirt_06.png" alt="bo-jack tshirt" class="products__image">
+                <img src="src/img/tshirts/tshirt_06.png" alt="bo-jack tshirt" class="products__image">
                 <div class="products__desc">
                   <div class="products__desc--text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, dignissimos!
@@ -190,6 +208,7 @@
             </li>
           </ul>
         </div>
+
       </section>
 
       <section class="collections">
@@ -312,28 +331,28 @@
                 <li class="socials__item">
                   <a href="#" class="socials__link">
                     <svg class="socials__icon">
-                      <use xlink:href="./src/icons/icons-sprite.svg#fb"></use>
+                      <use xlink:href="src/icons/icons-sprite.svg#fb"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="socials__item">
                   <a href="#" class="socials__link">
                     <svg class="socials__icon">
-                      <use xlink:href="./src/icons/icons-sprite.svg#twitter"></use>
+                      <use xlink:href="src/icons/icons-sprite.svg#twitter"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="socials__item">
                   <a href="#" class="socials__link">
                     <svg class="socials__icon">
-                      <use xlink:href="./src/icons/icons-sprite.svg#insta"></use>
+                      <use xlink:href="src/icons/icons-sprite.svg#insta"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="socials__item">
                   <a href="#" class="socials__link">
                     <svg class="socials__icon">
-                      <use xlink:href="./src/icons/icons-sprite.svg#pin"></use>
+                      <use xlink:href="src/icons/icons-sprite.svg#pin"></use>
                     </svg>
                   </a>
                 </li>
@@ -344,5 +363,10 @@
 
     </div>
 
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>  
+    <script src="scripts/sidebar-menu.js" type="text/javascript"></script>
+    <script src="scripts/fade-slider-animation.js" type="text/javascript"></script>
+    <script src="scripts/filter.js" type="text/javascript"></script>
+  
   </body>
 </html>

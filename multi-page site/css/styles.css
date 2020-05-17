@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'alegreya';
-    src: url('/src/fonts/alegreyasanssc-black-webfont.woff2') format('woff2'),
-         url('/src/fonts/alegreyasanssc-black-webfont.woff') format('woff');
+    src: url('../src/fonts/alegreyasanssc-black-webfont.woff2') format('woff2'),
+         url('../src/fonts/alegreyasanssc-black-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;}
 
@@ -46,7 +46,7 @@ body{
 .hero{
   height: 100vh;
   min-height: 650px;
-  background: url(/src/img/bg/hero.jpg) center center / cover no-repeat;
+  background: url(../src/img/bg/hero.jpg) center center / cover no-repeat;
   position: relative;
   margin-bottom: 130px;
 }
@@ -90,18 +90,55 @@ body{
 .fade-slider{
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .fade-slider__item{
-  background: url("/src/img/content/hero/slider_pic_1.png") center center / contain no-repeat;
+  background: center center / contain no-repeat;
   height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.fade-slider__item--style-tshirts{
+  background-image: url("../src/img/content/hero/slider_pic_1.png");
+}
+
+.fade-slider__item--style-games{
+  background-image: url(../src/img/content/hero/slider_pic_2.png);
+  justify-content: center;
+}
+
+.fade-slider__item--style-presents{
+  background-image: url(../src/img/content/hero/slider_pic_3.png);
+}
+
+.fade-slider__item--visible{
+  opacity: 1;
 }
 
 .fade-slider__text{
   position: absolute;
+}
+
+.fade-slider__item--style-tshirts .fade-slider__text{
   left: 50%;
   top: 50%;
   transform: translate(-164%, -52%);
+}
+
+.fade-slider__item--style-games .fade-slider__text{
+  bottom: -10%;
+}
+
+.fade-slider__item--style-presents .fade-slider__text{
+  bottom: 10%;
+  left: 3%;
 }
 
 .lined-text{
@@ -115,6 +152,16 @@ body{
   align-items: flex-start;
 }
 
+.fade-slider__item--style-games .lined-text{
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.fade-slider__item--style-presents .lined-text{
+  -ms-align-items: center;
+  align-items: center;
+}
+
 .lined-text__word{
   background-color: #000;
   margin-top: -7px;
@@ -125,7 +172,7 @@ body{
   color:#ffbc2f;
 }
 
-.lined-text__word:nth-child(2n){
+.fade-slider__item--style-tshirts .lined-text__word:nth-child(2n){
   margin-left: 8px;
 }
 
@@ -141,6 +188,7 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  transition: width 0.3s;
 }
 
 .sidebar__header{
@@ -183,12 +231,14 @@ body{
 .side-menu{
   position: absolute;
   left: -400px;
+  transition: left 0.3s;
 }
 
 .sidebar--opened .sidebar__menu{
   left: 0;
   width: 100%;
   text-align: center;
+  transition-delay: 0.1s;
 }
 
 .sidebar__close{
@@ -384,7 +434,7 @@ body{
   flex: 1;
   overflow: hidden;
   margin-right: 30px;
-  background: url("/src/img/bg/pattern.png") center center / 500px;
+  background: url("../src/img/bg/pattern.png") center center / 500px;
   position: relative;
 }
 
@@ -400,11 +450,11 @@ body{
 }
 
 .collection__item--type-guys::before{
-  background-image: url("/src/img/collections/collection_man.png");
+  background-image: url("../src/img/collections/collection_man.png");
 }
 
 .collection__item--type-girls::before{
-  background-image: url("/src/img/collections/collection_woman.png");
+  background-image: url("../src/img/collections/collection_woman.png");
   top: -31%;
   width: 80%;
   left: -25%;
@@ -533,7 +583,7 @@ body{
 
 .extras__col-socials{
   height: 100%;
-  background: url("/src/img/bg/pattern.png") center center / 500px;
+  background: url("../src/img/bg/pattern.png") center center / 500px;
   display: flex;
   align-items: center;
   justify-content: center;
